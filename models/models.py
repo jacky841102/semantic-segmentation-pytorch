@@ -26,7 +26,7 @@ class SegmentationModule(SegmentationModuleBase):
         self.crit = crit
         self.deep_sup_scale = deep_sup_scale
 
-    def forward(self, feed_dict, *, segSize=None):
+    def forward(self, feed_dict, segSize=None):
         # training
         if segSize is None:
             if self.deep_sup_scale is not None: # use deep supervision technique
